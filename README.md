@@ -31,7 +31,7 @@ Next add the module to your config:
   modules: [
     ['nuxt-custom-element', { name: 'my-nuxt-spa' }]
   ]
-...
+```
 
 ## Options
 
@@ -66,6 +66,8 @@ Optional, the props that your custom element supports.
 // module options
 { props: ['path'] }
 
+<custom-element path="/about"></custom-element>
+
 // pages/index.vue
 mounted() {
   console.log('Path prop has value', this.$root.path)
@@ -89,8 +91,8 @@ The minimum bundle size was reached by disabling [most Nuxt.js features](https:/
 ## Caveats
 
 - See [vue-custom-element caveats](https://github.com/karol-f/vue-custom-element#caveats) for general remarks
-- The Nuxt app is not the root component! Instead, it is the first child of the root component. Eg in a default SPA project the Nuxt app has `_uid: 0`, but when using nuxt-custom-element it has `_uid: 1`
-- It's recommended to be _very careful_ with using `head`. Using `head` will probably effect the parent page as well, not just your custom element
+- The Nuxt app is **not** the root component. Instead, it is the first child of the root component. Eg in a default SPA project the Nuxt app has `_uid: 0`, but when using nuxt-custom-element it has `_uid: 1`
+- It's advised to be _very careful_ with using `head`. Using `head` will probably effect the parent page as well, not just your custom element
 
 ## TODO
 
