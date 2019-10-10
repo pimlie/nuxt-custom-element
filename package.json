@@ -1,0 +1,69 @@
+{
+  "name": "nuxt-custom-element",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Publish your Nuxt SPA as a vue-custom-element",
+  "main": "lib/index.js",
+  "repository": "pimlie/nuxt-custom-element",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib",
+    "scripts"
+  ],
+  "keywords": [
+    "nuxt",
+    "nuxtjs",
+    "vue",
+    "vuejs",
+    "nuxt-module",
+    "web-component",
+    "vue-custom-element"
+  ],
+  "scripts": {
+    "clean": "rimraf ./**/.nuxt example/dist",
+    "coverage": "codecov",
+    "example": "nuxt dev example",
+    "lint": "eslint --fix --ext .js lib test example",
+    "postinstall": "./scripts/postinstall.js",
+    "release": "yarn lint && yarn test && yarn build && standard-version",
+    "test": "yarn test:fixtures && yarn test:e2e",
+    "test:e2e": "jest test/e2e",
+    "test:fixtures": "jest test/fixtures"
+  },
+  "dependencies": {
+    "@nuxt/blueprints": "^0.1.0-beta.3",
+    "document-register-element": "^1.14.3",
+    "vue-custom-element": "^3.2.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.6.0",
+    "@nuxtjs/eslint-config": "^1.1.2",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "browserstack-local": "^1.4.2",
+    "codecov": "^3.5.0",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "geckodriver": "^1.18.0",
+    "get-port": "^5.0.0",
+    "jest": "^24.9.0",
+    "node-env-file": "^0.1.8",
+    "nuxt-edge": "latest",
+    "puppeteer-core": "^1.20.0",
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "standard-version": "^7.0.0",
+    "tib": "^0.7.2",
+    "vue-jest": "^3.0.5"
+  }
+}
