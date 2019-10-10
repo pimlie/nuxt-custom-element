@@ -35,6 +35,16 @@ Next add the nuxt-custom-element module to your config:
   ]
 ```
 
+### Temporary fix
+
+As nuxt v2.10 still contains a SPA build error this module uses `nuxt-edge`. Unfortunately the @nuxt/blueprints dependency is using `nuxt`, which is a conflict as you cannot install both
+
+To mitigate this until Nuxt.js v2.10.1 has been released, this package includes a custom @nuxt/blueprints build which uses `nuxt-edge` as well. You have to run the following script to activate the custom build
+
+```sh
+$ ./node_modules/nuxt-custom-element/scripts/postinstall.js
+```
+
 ## Options
 
 ### `name` *required*
