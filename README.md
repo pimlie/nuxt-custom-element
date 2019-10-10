@@ -102,11 +102,11 @@ The minimum bundle size was reached by disabling [most Nuxt.js features](https:/
 - randomize globalName?
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/pimlie/nuxt-custom-element/latest.svg?style=flat-square
-[npm-version-href]: https://npmjs.com/package/pimlie/nuxt-custom-element
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-custom-element/latest.svg?style=flat-square
+[npm-version-href]: https://npmjs.com/package/nuxt-custom-element
 
-[npm-downloads-src]: https://img.shields.io/npm/dt/pimlie/nuxt-custom-element.svg?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/pimlie/nuxt-custom-element
+[npm-downloads-src]: https://img.shields.io/npm/dt/nuxt-custom-element.svg?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/nuxt-custom-element
 
 [circle-ci-src]: https://img.shields.io/circleci/project/github/pimlie/nuxt-custom-element.svg?style=flat-square
 [circle-ci-href]: https://circleci.com/gh/pimlie/nuxt-custom-element
