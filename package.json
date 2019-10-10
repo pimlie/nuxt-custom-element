@@ -42,6 +42,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.6.0",
+    "@nuxtjs/axios": "^5.6.0",
     "@nuxtjs/eslint-config": "^1.1.2",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",

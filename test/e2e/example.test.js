@@ -22,6 +22,7 @@ describe('basic', () => {
   afterAll(() => browser.close())
 
   test('open container', async () => {
+    jest.spyOn(console, 'log')
     const url = browser.getUrl('/')
 
     page = await browser.page(url, '#__customelementexample')
@@ -30,6 +31,11 @@ describe('basic', () => {
 
     expect(await page.getText('#__customelementexample h1')).toBe('Hello World')
     expect(await page.getText('#__customelementexample a')).toBe('About')
+
+    expect(console.log).toHaveBeenCalledTimes(2)
+    expect(console.log).toHaveBeenCalledWith('Path prop has value /')
+    expect(console.log).toHaveBeenCalledWith('hasAxios? true')
+    console.log.mockRestore()
   })
 
   test('nav /about', async () => {

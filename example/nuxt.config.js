@@ -2,6 +2,7 @@ export default {
   mode: 'spa',
 
   modules: [
+    '@nuxtjs/axios',
     ['@@/..', {
       // A unique globalName is required to prevent
       // collision with other Nuxt apps

@@ -10,6 +10,7 @@
 export default {
   mounted() {
     console.log('Path prop has value', this.$root.path)
+    console.log('hasAxios?', !!this.$axios)
   }
 }
 </script>
