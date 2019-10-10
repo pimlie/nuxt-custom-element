@@ -11,6 +11,7 @@ module.exports = {
 
   collectCoverageFrom: [
     'lib/**/*.js',
+    '!**/lib/blueprint/app/**'
   ],
 
   moduleNameMapper: {
