@@ -7,7 +7,7 @@
 
 > Publish your Nuxt SPA as a vue-custom-element
 
-`nuxt-custom-element` uses [`vue-custom-element`](https://github.com/karol-f/vue-custom-element) to publish your Nuxt SPA as a custom element / web-component.
+`nuxt-custom-element` is a Nuxt.js module that uses [`vue-custom-element`](https://github.com/karol-f/vue-custom-element) to publish your Nuxt SPA as a custom element / web-component.
 
 ## Example
 
@@ -15,7 +15,7 @@ See the [example](./example) folder for an example project
 
 ## Installation
 
-Install the package
+Install the module package
 
 ```bash
 $ yarn add nuxt-custom-element
@@ -23,7 +23,7 @@ $ yarn add nuxt-custom-element
 $ npm i nuxt-custom-element
 ```
 
-Next add the module to your config:
+Next add the nuxt-custom-element module to your config:
 
 ```
 // nuxt.config.js
