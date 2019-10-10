@@ -11,7 +11,9 @@
 
 ## Example
 
-See the [example](./example) folder for an example project
+See the [example](./example) folder for an example project.
+
+To run the example locally, clone this repo, run `yarn install` or `npm i` and then `yarn example` or `npm run example`
 
 ## Installation
 
