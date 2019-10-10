@@ -27,7 +27,7 @@
     "example": "nuxt dev example",
     "lint": "eslint --fix --ext .js lib test example",
     "postinstall": "./scripts/postinstall.js",
-    "release": "yarn lint && yarn test && yarn build && standard-version",
+    "release": "yarn lint && yarn test && standard-version",
     "test": "yarn test:fixtures && yarn test:e2e",
     "test:e2e": "jest test/e2e",
     "test:fixtures": "jest test/fixtures"
