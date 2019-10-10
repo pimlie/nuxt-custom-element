@@ -25,7 +25,7 @@ $ npm i nuxt-custom-element
 
 Next add the nuxt-custom-element module to your config:
 
-```
+```js
 // nuxt.config.js
   mode: 'spa', // this module only works in SPA mode!
   modules: [
