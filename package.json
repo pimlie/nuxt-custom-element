@@ -32,7 +32,7 @@
     "test:fixtures": "jest test/fixtures"
   },
   "dependencies": {
-    "@nuxt/blueprints": "^0.1.0-beta.3",
+    "@nuxt/blueprints": "beta",
     "document-register-element": "^1.14.3",
     "vue-custom-element": "^3.2.9"
   },
