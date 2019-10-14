@@ -1,7 +1,7 @@
 import path from 'path'
-import { loadFixture, Nuxt, Builder, BundleBuilder, listPaths } from '.'
+import { loadFixture, Nuxt, Builder, BundleBuilder, Generator, listPaths } from '.'
 
-export function buildFixture ({ dir, callback, hooks = [], changedPaths = [] }) {
+export function buildFixture ({ dir, generate, callback, hooks = [], changedPaths = [] }) {
   const pathsBefore = {}
   let nuxt
 
@@ -18,12 +18,17 @@ export function buildFixture ({ dir, callback, hooks = [], changedPaths = [] }) 
 
     const buildDone = jest.fn()
     hooks.forEach(([hook, fn]) => nuxt.hook(hook, fn))
-    nuxt.hook('build:done', buildDone)
 
     const builder = await new Builder(nuxt, BundleBuilder)
-    // const generator = new Generator(nuxt, builder)
-    // await generator.generate({ init: true, build: true })
-    await builder.build()
+
+    if (generate) {
+      nuxt.hook('generate:done', buildDone)
+      const generator = new Generator(nuxt, builder)
+      await generator.generate({ init: true, build: true })
+    } else {
+      nuxt.hook('build:done', buildDone)
+      await builder.build()
+    }
 
     // 2: BUILD_DONE
     expect(builder._buildStatus).toBe(2)
