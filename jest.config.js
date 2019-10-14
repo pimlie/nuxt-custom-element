@@ -10,13 +10,13 @@ module.exports = {
   coverageDirectory: './coverage',
 
   collectCoverageFrom: [
-    'lib/**/*.js',
-    '!**/lib/blueprint/app/**'
+    'src/**/*.js',
+    '!**/src/blueprint/app/**'
   ],
 
   moduleNameMapper: {
     "test-utils(.*)$": "<rootDir>/test/utils$1",
-    "^lib(.*)$": "<rootDir>/lib$1"
+    "^src(.*)$": "<rootDir>/src$1"
   },
 
   transform: {

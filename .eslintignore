@@ -4,3 +4,4 @@ dist
 
 # ignore app templates
 lib/blueprint/app/**
+src/blueprint/app/**

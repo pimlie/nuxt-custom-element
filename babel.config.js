@@ -3,15 +3,11 @@ module.exports = {
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-syntax-dynamic-import'
   ],
-  'env': {
-    'test': {
-      'presets': [
-        [ '@babel/preset-env', {
-          'targets': {
-            'node': 'current'
-          }
-        }]
-      ]
-    }
-  }
+  'presets': [
+    [ '@babel/preset-env', {
+      'targets': {
+        'node': '8.6'
+      }
+    }]
+  ]
 }

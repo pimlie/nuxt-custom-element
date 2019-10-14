@@ -3,14 +3,15 @@
   "version": "0.1.0-beta.2",
   "license": "MIT",
   "description": "Publish your Nuxt SPA as a vue-custom-element",
-  "main": "lib/index.js",
+  "main": "dist/nuxt-custom-element.js",
+  "module": "dist/nuxt-custom-element.esm.js",
   "repository": "pimlie/nuxt-custom-element",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "lib",
-    "scripts"
+    "dist",
+    "src"
   ],
   "keywords": [
     "nuxt",
@@ -22,10 +23,11 @@
     "vue-custom-element"
   ],
   "scripts": {
+    "build": "rimraf dist && rollup -c rollup.config.js",
     "clean": "rimraf ./**/.nuxt example/dist",
     "coverage": "codecov",
     "example": "nuxt dev example",
-    "lint": "eslint --fix --ext .js lib test example",
+    "lint": "eslint --fix --ext .js src test example",
     "release": "yarn lint && yarn test && standard-version",
     "test": "yarn test:fixtures && yarn test:e2e",
     "test:e2e": "jest test/e2e",
@@ -58,9 +60,17 @@
     "geckodriver": "^1.18.0",
     "get-port": "^5.0.0",
     "jest": "^24.9.0",
+    "lodash.defaultsdeep": "^4.6.1",
+    "lodash.kebabcase": "^4.1.1",
     "node-env-file": "^0.1.8",
     "nuxt": "^2.10.1",
     "puppeteer-core": "^1.20.0",
+    "rollup": "^1.23.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
     "selenium-webdriver": "^4.0.0-alpha.5",
     "standard-version": "^7.0.0",
     "tib": "^0.7.2",
