@@ -80,8 +80,9 @@ export default class CustomElementBlueprint extends Blueprint {
       return
     }
 
-    nuxt.hook('build:done', async () => {
+    nuxt.hook('generate:done', async () => {
       try {
+        await fsExtra.remove(distDir)
         await fsExtra.ensureDir(distDir)
         await fsExtra.copy(path.resolve(nuxt.options.buildDir, 'dist/client'), distDir)
         await fsExtra.copy(path.resolve(nuxt.options.buildDir, 'static/app.html'), path.join(distDir, 'index.html'))
