@@ -4,7 +4,7 @@ import webpack from 'webpack'
 import consola from 'consola'
 import { Blueprint } from '@nuxt/blueprints'
 import { isNonEmptyString } from '@nuxt/utils'
-import kebabCase from 'lodash/kebabCase'
+import kebabCase from 'lodash.kebabcase'
 
 const logger = consola.withScope('CustomElement')
 
