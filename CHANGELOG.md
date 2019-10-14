@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0-beta.4](https://github.com/pimlie/nuxt-custom-element/compare/v0.1.0-beta.3...v0.1.0-beta.4) (2019-10-14)
+
+
+### Bug Fixes
+
+* use generate hook (not build) ([92a9927](https://github.com/pimlie/nuxt-custom-element/commit/92a99279851b9fa08ea4d99edd23188e019fd569))
+
 ## [0.1.0-beta.3](https://github.com/pimlie/nuxt-custom-element/compare/v0.1.0-beta.2...v0.1.0-beta.3) (2019-10-14)
 
 ## [0.1.0-beta.2](https://github.com/pimlie/nuxt-custom-element/compare/v0.1.0-beta.1...v0.1.0-beta.2) (2019-10-11)

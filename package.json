@@ -1,6 +1,6 @@
 {
   "name": "nuxt-custom-element",
-  "version": "0.1.0-beta.3",
+  "version": "0.1.0-beta.4",
   "license": "MIT",
   "description": "Publish your Nuxt SPA as a vue-custom-element",
   "main": "dist/nuxt-custom-element.js",
