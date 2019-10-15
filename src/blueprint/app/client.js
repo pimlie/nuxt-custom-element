@@ -758,6 +758,7 @@ function addHotReload ($component, depth) {
   <% if (store) { %>store = __app.store<% } %>
 
   // Create Vue instance
+    let appElement
     app.props = <%= devalue(nuxtOptions.customElement.props) %>
 
     Vue.customElement('<%= nuxtOptions.customElement.elementName %>', app, {
@@ -766,6 +767,11 @@ function addHotReload ($component, depth) {
       // we have to re-push the main route
       // TODO: make default route a prop
       router.push(router.resolve({ path: '/' }))
+
+      // Remove the element from the root, we want to delay mounting
+      appElement = customRoot.el
+      delete customRoot.el
+
       return customRoot
     },
     async vueInstanceCreatedCallback() {
@@ -780,7 +786,7 @@ function addHotReload ($component, depth) {
 
   // Mounts Vue app to DOM element
   const mount = () => {
-    //_app.$mount('#<%= globals.id %>')
+    _app.$mount(appElement)
 
     // Add afterEach router hooks
     router.afterEach(normalizeComponents)
